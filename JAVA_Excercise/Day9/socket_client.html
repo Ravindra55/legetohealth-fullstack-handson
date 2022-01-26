@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>this is client program</h2>
+    <div>
+        <input type='text', id='clientinput'>
+        <button onclick="sendMessage()">send</button>
+    </div>
+    <div id="msg"></div>
+    <script type='text/JavaScript', src='\socket.io/socket.io.js'> </script>
+    <script type='text/JavaScript'>
+        /trying to establish the connection
+        let socket=io();
+        //recieve the message
+        socket.on("messagekey",(message) =>{
+            document.getEementById("message").innerHTML+="<p>"+message+"</p>";
+
+        });
+        function.sendMessage(){
+            let val=document.getElementById("cliet input").value;
+            socket.emit("client message",val);
+        }
+
+    </script>
+
+    
+</body>
+</html>

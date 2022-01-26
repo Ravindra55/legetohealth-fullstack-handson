@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .JavaScript{
+            width: 100px; height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1id='i1' style='color:violet'>hello java script</h1>
+    <img src="Images/istockphoto-1" id="mainImage" width="300" height="300">
+</hr>
+
+    
+       <div onClick=handleClick(event)>
+           <img src="Images/istockphoto-1.jpg" class="javascript">
+           <img src="Images/sunset-quotes-2.jpg" class="javascript">
+
+    </div>
+    <script type="text/javascript">
+        var counter=0;
+        function handleClick(event){
+        if(counter>2){
+        counter=0;
+        }
+        var colors=['red','green','yellow']
+        var x=Document.getElementById('i1');
+        x.style.colors=colors.[counter++];
+        var ele=Document.getElementById('mainImage');
+        if(event.target.tagName=="IMG"){
+            ele.src=event.target.src;
+
+        }
+    }
+    </script>
+
+    
+</body>
+</html>

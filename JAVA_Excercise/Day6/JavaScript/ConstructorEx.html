@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Understanding ES6,ES7,ES8 these are lats vesions!</h1>
+    </hr>
+    <script type='text/JavaScript'>
+        class employee{
+        constructor(name, age) {
+            this.name=name;
+            this.age=age;    
+        }
+        display(){
+            document.write(`<p>name:`+this.name+ `,,,,,,,age:`+this.age+`</p>`)
+
+        }
+    }
+    class Manager extends employee{
+        constructor(name ,age,employeesreporting){
+            super(name,age);
+            this.employeesreporting=employeesreporting;
+        }
+        display(){
+            document.write(`<p>name:`+this.name+ `,,,,,,,age:`+this.age+`,,,,employeesreporting:`+this.employeesreporting+`</p>`)
+
+        }
+
+    } 
+    var e=new Manager('ravindra',24,100);
+    e.display();
+
+
+
+    </script>  
+</body>
+</html>

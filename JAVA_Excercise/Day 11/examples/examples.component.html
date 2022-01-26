@@ -1,0 +1,42 @@
+
+
+
+<div>
+    <p>examples works!</p>
+    <p>Name:{{name  |  uppercase }}</p>
+    <p>salary:{{salary  | currency}}</p>
+    <p>salary:{{salary   | currency:'IND'}}</p>
+    <p>salary:{{salary   |  currency:'JPY'}}</p>
+    <p>Dob:{{dob  |  date}}</p>
+    <p>Dob:{{dob  | date:'dd-MM-yyyy'}}</p>
+    <p>Dob:{{dob  | date:'MM-dd-yyyy'}}</p>
+
+    <div>
+        <p *ngif="status">:Status:{{status}}</p>
+        <div *ngFor="let f of fruits">{{f}}</div>
+        <ol>
+            <li *ngFor="let f of fruits">{{f}}</li>
+        </ol>
+    </div>
+    <p>[fruits method is completed]</p>
+    <div>
+        
+        <table class="employee" width="30%">
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>salary</th>
+                
+            </tr>
+
+            <tr *ngFor="let e of employee">
+                <td>{{e.id}}</td> 
+                <td>{{e.name}}</td> 
+                <td>{{e.salary}}</td>
+            </tr>
+        </table>
+    </div>
+       
+</div>
+
+
