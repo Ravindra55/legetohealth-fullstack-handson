@@ -1,0 +1,16 @@
+<!--<p>parent works!</p>-->
+<!---app-child></app-child>--->
+<div>
+    <h2>Parent componenet {{firstname}}</h2><br/>
+    <h2>total number of clicks count is : {{clicks}}</h2>
+   <!----- <div>
+        <app-child [username]="firstname"></app-child>
+    </div>-->
+    
+    <h2>Iterarting the child component</h2>
+    <div *ngFor="let u of users">
+       
+        <!--<app-child [username]="u"></app-child>-->
+        <app-child [username]="u" (eventCounter)="numberOfClicks($event)"></app-child>
+    </div>
+</div>

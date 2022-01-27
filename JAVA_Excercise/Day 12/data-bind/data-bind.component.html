@@ -1,0 +1,22 @@
+<div>
+    <h1>Data binding examples</h1>
+    <h2>Event binding Ex</h2>
+    <h2>Property Binding</h2>
+    <h2> username:{{username}}</h2>
+    <!---<button (click)="handleClick()">MyButton</button>-->
+    <!--- #un is the template reference you can access some inbuilt properties like values-->
+    <input type="text" autocomplete="true" #un>
+    <button (click)=handleClick(un.value)>MyButton</button>
+    <div [hidden]="toggleButton">hello propety</div>
+    <button [disabled]="toggleButton">MyButton2</button>
+    
+    <h3>two way data-binding </h3>
+    <!---two way databinding message here update the component message-->
+    <input type="text" name="msg" [(ngModel)]="message"><br/>
+    <input type="text" name="msg" [(ngModel)]="message">
+    <div>
+        Message:{{message}}
+    </div>
+    
+</div>
+
