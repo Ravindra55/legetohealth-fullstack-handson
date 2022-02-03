@@ -1,0 +1,33 @@
+<div>
+    <p>template-driven-form-ex Demo</p>
+<form #simpleEx="ngForm" (onSubmit)="handleSubmit(simpleEx.value)">
+    <div>
+        username <input type="text"  name="un" ngModel autocomplete="off" #un="ngModel" required />
+        <span class="text-danger" [hidden]="un.valid || un.pristine">Username is mandatory </span>
+       
+    </div>
+    <div>
+        password <input type="text" name="pw" ngModel  #pw="ngModel" required/>
+        <span class="text-danger" [hidden]="pw.valid || un.pristine">Password  is mandatory </span>
+
+    </div>
+    <div>
+         <input type="submit" value="login" [disabled]="simpleEx.invalid" />
+    </div>
+
+</form>
+<div>
+    <h4>Form value</h4>
+    <p>{{simpleEx.value | json}}</p>
+    <p >form is valid :{{simpleEx.valid}},Invalid:{{simpleEx.invalid}}</p>
+    <p> username is valid :{{un.valid}},pristine:{{un.pristine}}</p>
+    <p>password is valid :{{pw.valid}},pristine:{{pw.pristine}}</p>
+
+
+
+</div>
+
+
+
+</div>
+
